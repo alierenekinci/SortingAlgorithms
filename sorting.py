@@ -6,11 +6,21 @@ class sorting:
         if(type(liste) == list): 
             self.array = np.array(liste)
             self.arraySize = self.array.size
+        elif(type(liste) == np.ndarray):
+            self.array = liste
+            self.arraySize = liste.size
         else:
             print("Liste halinde vermek zorundasın.")
     
     def selectionSort(self):
-        pass
+        for i in range(self.arraySize - 1):
+            for j in range(i + 1, self.arraySize):
+                if(self.array[j] < self.array[i]):
+                    self.array[j], self.array[i] = self.array[i] , self.array[j]
+        print(self.array)
 
-sirala = sorting([1,2,36,7])
+
+randomIntNumbers = np.random.randint(0,100,6)
+print(randomIntNumbers)
+sirala = sorting(randomIntNumbers)
 sirala.selectionSort()
