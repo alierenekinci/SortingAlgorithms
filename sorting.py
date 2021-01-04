@@ -17,10 +17,10 @@ class sorting:
             for j in range(i + 1, self.arraySize):
                 if(self.array[j] < self.array[i]):
                     self.array[j], self.array[i] = self.array[i] , self.array[j]
-        print(self.array)
+        print("Sıralanmış:",self.array)
 
 
 randomIntNumbers = np.random.randint(0,100,6)
-print(randomIntNumbers)
+print("Sıralanmamış:",randomIntNumbers)
 sirala = sorting(randomIntNumbers)
 sirala.selectionSort()
