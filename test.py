@@ -10,7 +10,7 @@ print(nonSorting.selectionSort())
 
 
 # Kabarcık Sıralama
-print(nonSorting.bubbleSort())
+#print(nonSorting.bubbleSort())
 
 # Kokteyl Sıralama
-print(nonSorting.cocktailSort())
+# print(nonSorting.cocktailSort())
