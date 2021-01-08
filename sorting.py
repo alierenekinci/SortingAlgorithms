@@ -18,7 +18,7 @@ class array:
             return self.array
         else:
             temp = list()
-            for i in range(self.arraySize-1,0, -1):
+            for i in range(self.arraySize-1,-1, -1):
                 temp.append(self.array[i])
             self.array = temp
             return self.array
@@ -55,17 +55,22 @@ class array:
             
             if not isSwapped:
                 return self.axisConvert()
-        
-                
-                
+
+    def oddEvenSort(self):
+        isSorted = 0
+
+        while isSorted == 0:
+            isSorted = 1
+            temp = 0
+
+            for i in range(1, self.arraySize-1, 2):
+                if self.array[i] > self.array[i+1]:
+                    self.array[i], self.array[i+1] = self.array[i+1], self.array[i]
+                    isSorted = 0
             
+            for i in range(0, self.arraySize-1, 2):
+                if self.array[i] > self.array[i+1]:
+                    self.array[i], self.array[i+1] = self.array[i+1], self.array[i]
+                    isSorted = 0
+        return self.axisConvert()
 
-
-
-
-"""
-randomIntNumbers = np.random.randint(0,100,6)
-print("Sıralanmamış:",randomIntNumbers)
-sirala = sorting(randomIntNumbers)
-sirala.selectionSort()
-"""
